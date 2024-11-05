@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Repository</title>
+    <title>Sales Analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3, h4, h5 {
+            color: #343a40;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Template Repo</a>
+            <a class="navbar-brand" href="#">Sales Analysis</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,13 +54,11 @@
                         <a class="nav-link" href="{{ url_for('regions.show_regions') }}">Regions</a>
                     </li>
                     <li class="nav-item">
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('sales.reports') }}">Reports</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('sales.visualization') }}">Visualization</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -42,7 +66,9 @@
 
     <!-- Content Block -->
     <div class="container mt-4">
-        {% block content %}{% endblock %}
+        {% block content %}
+        <h1 class="text-center my-4">Welcome to Sales Analysis</h1>
+        {% endblock %}
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

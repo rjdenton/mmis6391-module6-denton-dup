@@ -1,6 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome to Your Template Repository!</h1>
-<p>This is a basic template setup to build upon.</p>
+<div class="text-center my-5">
+    <h1 class="display-4">Welcome to Sales Analysis Platform</h1>
+    <p class="lead text-muted">Your one-stop solution for managing, analyzing, and visualizing sales data.</p>
+</div>
+
+<div class="container">
+    <div class="row text-center">
+        <!-- Sales Section -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Sales</h5>
+                    <p class="card-text">Add, edit, and delete sales records to keep your data up-to-date.</p>
+                    <a href="{{ url_for('sales.show_sales') }}" class="btn btn-primary">Go to Sales</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regions Section -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Regions</h5>
+                    <p class="card-text">Add or update regions for more accurate data classification.</p>
+                    <a href="{{ url_for('regions.show_regions') }}" class="btn btn-primary">Go to Regions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports Section -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">View Reports</h5>
+                    <p class="card-text">Analyze sales trends and performance metrics across different regions and timeframes.</p>
+                    <a href="{{ url_for('sales.reports') }}" class="btn btn-primary">Go to Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <!-- Visualization Section -->
+        <div class="col-md-4 offset-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Sales Visualization</h5>
+                    <p class="card-text">Explore interactive charts and graphs to visualize your sales data.</p>
+                    <a href="{{ url_for('sales.visualization') }}" class="btn btn-primary">Go to Visualization</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
