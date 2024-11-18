@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Sales Reports</h1>
+
+    <h3>Total Sales by Region</h3>
+    <div class="table-responsive">
+        <style>
+            table.table th, table.table td {
+                text-align: center;
+                vertical-align: middle;
+            }
+        </style>
+        {{ sales_by_region | safe }}
+    </div>
+
+    <h3>Monthly Sales Trend</h3>
+    <div class="table-responsive">
+        {{ monthly_trend | safe }}
+    </div>
+
+    <h3>Top-Performing Region</h3>
+    <div class="table-responsive">
+        {{ top_region | safe }}
+    </div>
+</div>
+{% endblock %}
